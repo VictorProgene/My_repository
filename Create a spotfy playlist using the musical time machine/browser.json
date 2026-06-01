@@ -1,0 +1,12 @@
+{
+    Your browser navigation data json
+    How to get your browser navigation JSON
+
+    Open YouTube Music in the browser where you're already logged in.
+    Press F12 to open Developer Tools.
+    Go to the Console tab.
+    Paste the code provided to you and press Enter.
+    A JSON object will be generated.
+    Copy the entire JSON output.
+    Paste it in place of:
+}
