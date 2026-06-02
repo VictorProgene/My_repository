@@ -6,12 +6,19 @@ from sqlalchemy import Integer, String, Float
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
+from dotenv import load_dotenv
 import requests
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Your key'
-API_KEY = "Your API KEY"
-API_READ_ACCESS_TOKEN = "Your API Token"
+
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+
+API_KEY = os.getenv("TMDB_API_KEY")
+API_READ_ACCESS_TOKEN = os.getenv("TMDB_API_READ_ACCESS_TOKEN")
+
 Bootstrap5(app)
 
 #--------------------------------------------CREATE DB----------------------------------------------------
