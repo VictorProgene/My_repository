@@ -3,10 +3,16 @@ from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired, URL
+from dotenv import load_dotenv
+import os
 import csv
 
+load_dotenv()
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Your Key'
+
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+
 Bootstrap5(app)
 
 
